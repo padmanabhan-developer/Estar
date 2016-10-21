@@ -7,9 +7,6 @@
 		 }); 
 	});	
 	$(document).ready(function() {
-	  /* One Page menu */
-	  $('.onepage-menu ul').onePageNav();
-	  
 	  /*Go to top*/
 	  $(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {
@@ -46,20 +43,18 @@
 		$('.simplenews-subscriber-form form').submit();
 	});
 	$('.search-action').click(function () {
-	    $(this).parents('form').submit();
+	        $(this).parents('form').submit();
     });
 	$('.search-toggle').click(function (e) {
 		e.stopPropagation();
 		$(this).hide();
 	    $(this).parents('.search-block-form').addClass("fullwidth");
     });
-	$(document).click(function(e) {
-		if(e.target.className !== "form-search"){
-			if ($('.search-block-form').hasClass("fullwidth")) {
-				$('.search-block-form').removeClass("fullwidth");
-				$('.search-toggle').show();
-			}
-		}
+	$(document).click(function(){
+		if ($('.search-block-form').hasClass("fullwidth")) {
+			$('.search-block-form').removeClass("fullwidth");
+			$('.search-toggle').show();
+		}		
 	});
 	//----------------------------------> Magnific Popup Lightbox
 	if ( $.isFunction($.fn.magnificPopup) ) {

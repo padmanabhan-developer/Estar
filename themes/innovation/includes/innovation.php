@@ -286,18 +286,21 @@ class InnovationTheme extends stdClass{
   }
   
   function get_layout() {
-   $alias = \Drupal::service('path.current')->getPath();
-		$return = 0;
+    $alias = \Drupal::request()->getRequestUri();
+      if(isset($_GET['innovation_layout']) && isset($this->layouts[$_GET['innovation_layout']])){
+        return $_GET['innovation_layout'];
+      }
+      $return = 0;
     foreach ($this->layouts as $k => $layout) {
-			if (isset($layout->isdefault) && $layout->isdefault){
+        if (isset($layout->isdefault) && $layout->isdefault){
         $return = $k;
         continue;
       }
-      $pages = isset($layout->pages)?$layout->pages:'';
-			if (empty($pages))
+      $page_list = isset($layout->pages)?$layout->pages:'';
+      if (empty($page_list))
         continue;
-			if (\Drupal::service('path.matcher')->matchPath($alias, $pages)) {
-      	return $k;
+      if (drupal_match_path($_GET['q'], $page_list) || drupal_match_path($alias, $page_list)) {
+        return $k;
       }
     }
     return $return;

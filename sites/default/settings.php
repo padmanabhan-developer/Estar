@@ -715,14 +715,14 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 #   include __DIR__ . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'extranetloginco_estar',
-  'username' => 'extranetloginco_d8',
-  'password' => 'db_pa$$word',
+  'database' => 'extranetdb',
+  'username' => 'root',
+  'password' => 'drupal',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
+  'driver' => 'mysql'
 );
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/default/files/config_Pv9hqvAaowSgaVfW4n5Mx_uXXLFp5LZZG--h-Wl-JF1rlJ8WTI7WrxRfJTWGtkKYWOENoFusUg/sync';

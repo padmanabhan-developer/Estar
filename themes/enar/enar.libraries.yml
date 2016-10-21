@@ -9,7 +9,6 @@ global-styling:
   js:
     assets/js/enar.js: {}
     /libraries/magnific-popup/jquery.magnific-popup.min.js: {minified: true}
-    assets/js/jquery.nav.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
@@ -33,3 +32,5 @@ revolution-slider:
     assets/js/enar-revolution.js: {}
   dependencies:
     - core/jquery    
+ 
+
