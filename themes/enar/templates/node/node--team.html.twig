@@ -65,22 +65,25 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
+<div{{ attributes }}>
     {{ title_prefix }}
     {{ title_suffix }}
-    <div class="portfolio-item teaser">
-        <div class="portfolio-image-overlay">
-           <div class="overlay-details">
-                <a href="#" class="expand_image">{% trans "View Larger" %}</a>
-                <a href="{{ url }}" class="detail_link">{% trans "More Details" %}</a>
-            </div>
+    <div class="team-item detail">
+		<div class="row">
+		<div class="col-md-4 col-sm-6">
+        <a class="member_img" href="{{ file_url(content.field_image['#items'].entity.uri.value) }}" data-rel="magnific-popup">
 			{{ content.field_image }}
-        </div>
-        <div class="portfolio-desc">
-            <h6 class="name"> <a href="{{ url }}" rel="bookmark">{{ label }}</a></h6>
-            <div class="portfolio-meta">
-                <span class="porto_date">{{ node.getDateCreated()|date("Y/m/d") }}</span>
-            </div>
-        </div>
-    </div>
-</article>
+		</a>
+		</div>
+		<div class="col-md-8 col-sm-6">
+			<div class="team_detail">
+				<div class="person_name">{{ label }}</div>
+				<div class="person_jop">{{ content.field_position }}</div>
+				<div class="person_desc">{{ content.body }}</div>
+				<div class="social_media clearfix">{{ content.field_social }}</div>
+			</div>
+		</div>
+		</div>
+		</div>
+</div>
+
