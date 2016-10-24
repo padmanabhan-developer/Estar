@@ -85,11 +85,11 @@
             </h2>
             <ul class="list-inline post-meta-info">
                 <li class="meta-date"><i class="ico-clock7"></i>{{ node.getDateCreated()|date("M d, Y") }}</li>
-                <!-- <li class="meta-comments"><i class="ico-comment-o"></i> {{ node.comment.comment_count }} {% trans "comment" %}</li> -->
+                <li class="meta-comments"><i class="ico-comment-o"></i> {{ node.comment.comment_count }} {% trans "comment" %}</li>
                 {% if content.field_blog_categories%}
                     <li class="meta-categories"><i class="ico-folder-open-o"></i>{{ content.field_blog_categories }}</li>
                 {% endif %}
-                <!-- <li class="meta-author"><i class="ico-user5"></i>{{ author_name }}</li> -->
+                <li class="meta-author"><i class="ico-user5"></i>{{ author_name }}</li>
             </ul>
             <div class='blog-shortdesc'>{{ content.body}}</div>
             <div class="mt20">

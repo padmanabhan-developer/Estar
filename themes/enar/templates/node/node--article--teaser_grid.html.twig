@@ -89,8 +89,8 @@
             <ul class="list-inline post-meta-info">
                 <li class="meta-date">{{ node.getDateCreated()|date("Y/m/d") }}</li>
                 <li class="meta_slash">/</li>
-                <!-- <li class="meta-comments">{{ node.comment.comment_count }} {% trans "comment" %}</li> -->
-                <!-- <li class="meta_slash">/</li> -->
+                <li class="meta-comments">{{ node.comment.comment_count }} {% trans "comment" %}</li>
+                <li class="meta_slash">/</li>
                 <li class="meta-author">{{ content.field_blog_categories }}</li>
             </ul>
             <div class='blog-shortdesc'>{{ content.body}}</div>
