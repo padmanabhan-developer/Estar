@@ -12,6 +12,10 @@
  */
 #}
 
+{% if node_url %}
+{% set url = node_url %}
+{% endif %}
+
 {% if url %}
   <a class='feature_inner_ling' href="{{ url }}">{{ image }}</a>
 {% else %}

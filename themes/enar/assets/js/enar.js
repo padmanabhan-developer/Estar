@@ -62,6 +62,7 @@
 		}
 	});
 	//----------------------------------> Magnific Popup Lightbox
+	/*
 	if ( $.isFunction($.fn.magnificPopup) ) {
 		$('.expand_image').each(function(index, element) {
 			$(this).click(function() {		
@@ -106,7 +107,8 @@
 				callbacks: {
 					beforeOpen: function() {
 						this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-						this.st.mainClass = /*this.st.el.attr('data-effect')*/ "mfp-zoom-in";
+						// this.st.mainClass = this.st.el.attr('data-effect');
+						this.st.mainClass = "mfp-zoom-in";
 					}
 				},
 				closeOnContentClick: true,
@@ -182,6 +184,7 @@
 			mainClass:'my-mfp-slide-bottom'
 		});
 	}
+	*/
 });
 })(window.jQuery);
 

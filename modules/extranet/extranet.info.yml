@@ -1,0 +1,6 @@
+name: extranet
+description: A custom module for Extranet to implement customizations that cannot be performed with other modules.
+package: Custom
+
+type: module
+core: 8.x
