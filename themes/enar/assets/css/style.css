@@ -5222,7 +5222,7 @@ a.img_popup:hover span {
   font-size: 50px;
   line-height: 50px;
   font-weight: 400;
-  color: #26CFCC;
+  color: #F86923;
   text-decoration: none;
   background-color: rgba(255,255,255,0.9);
   padding: 20px 25px 25px;
@@ -5237,7 +5237,7 @@ a.img_popup:hover span {
   font-weight: 400;
   color: #ffffff;
   text-decoration: none;
-  background-color: rgba(38,207,204,0.8);
+  background-color: rgba(230,120,3,0.8);
   padding: 20px 25px 25px;
   text-shadow: none;
   border-width: 0px;
@@ -5259,7 +5259,7 @@ a.img_popup:hover span {
   border-style: none;
 }
 .tp-caption.white_heavy_70.has_bg {
-  background-color: rgba(38,207,204,0.8);
+  background-color: rgba(230,120,3,0.8);
 }
 .tp-caption.white_heavy_70 {
   font-size: 70px;
