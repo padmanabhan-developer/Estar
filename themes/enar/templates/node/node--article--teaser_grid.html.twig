@@ -93,7 +93,10 @@
                 <li class="meta_slash">/</li>
                 <li class="meta-author">{{ content.field_blog_categories }}</li>
             </ul>
-            <div class='blog-shortdesc'>{{ content.body}}</div>
+            {% set conBody %}
+                {{ content.body }}
+            {% endset %}
+            <div class='blog-shortdesc'>{{ conBody|striptags}}</div>
         </div>
     </div>
 </article>
